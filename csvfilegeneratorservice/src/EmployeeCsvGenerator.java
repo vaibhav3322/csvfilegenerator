@@ -17,8 +17,8 @@ public class EmployeeCsvGenerator {
 
     public static void main(String[] args) throws IOException {
 
-        int totalRecords = 1_000_000; // change to 5_000_000 or 10_000_000 if needed
-        String fileName = "employee_1M.csv";
+        int totalRecords = 100000; // change to 5_000_000 or 10_000_000 if needed
+        String fileName = "employee_1L.csv";
 
         BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
 
@@ -26,7 +26,7 @@ public class EmployeeCsvGenerator {
         writer.write("id,firstname,lastname,salary,address,dateofbirth,department");
         writer.newLine();
 
-        LocalDate baseDob = LocalDate.of(1980, 1, 1);
+        LocalDate baseDob = LocalDate.of(1995, 1, 1);
 
         for (int i = 1; i <= totalRecords; i++) {
 
